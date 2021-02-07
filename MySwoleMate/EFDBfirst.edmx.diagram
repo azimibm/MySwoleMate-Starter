@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="88d141cb99424885a2b43deb403b05f1" Name="Diagram1">
+      <Diagram DiagramId="8add8750ae0f42e99d0c5d44984d7573" Name="Diagram1">
         <EntityTypeShape EntityType="MySwoleMateModel.Measurement" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="MySwoleMateModel.Schedule" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MySwoleMateModel.Trainee" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />

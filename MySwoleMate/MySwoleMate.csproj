@@ -78,16 +78,11 @@
     <Content Include="AddWorkout.aspx" />
     <Content Include="AssignWorkout.aspx" />
     <Content Include="EditWorkout.aspx" />
-    <Content Include="EFDBfirst.Context.tt">
+    <Content Include="EFDBFirst.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>EFDBfirst.Context.cs</LastGenOutput>
-      <DependentUpon>EFDBfirst.edmx</DependentUpon>
+      <DependentUpon>EFDBFirst.edmx</DependentUpon>
+      <LastGenOutput>EFDBFirst.Context.cs</LastGenOutput>
       <CustomToolNamespace>MySwoleMate.Models</CustomToolNamespace>
-    </Content>
-    <Content Include="EFDBfirst.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EFDBfirst.edmx</DependentUpon>
-      <LastGenOutput>EFDBfirst.cs</LastGenOutput>
     </Content>
     <Content Include="packages.config" />
     <Content Include="MasterPages\MySwoleMate.Master" />
@@ -99,12 +94,12 @@
     <Content Include="Scheduler.aspx" />
     <Content Include="ViewWorkout.aspx" />
     <Content Include="Workout.aspx" />
-    <EntityDeploy Include="EFDBfirst.edmx">
+    <EntityDeploy Include="EFDBFirst.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EFDBfirst.Designer.cs</LastGenOutput>
+      <LastGenOutput>EFDBFirst.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="EFDBfirst.edmx.diagram">
-      <DependentUpon>EFDBfirst.edmx</DependentUpon>
+    <Content Include="EFDBFirst.edmx.diagram">
+      <DependentUpon>EFDBFirst.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\LocalIIS.pubxml" />
     <None Include="Properties\PublishProfiles\LocalIIS1.pubxml" />
@@ -180,20 +175,15 @@
     <Compile Include="EditWorkout.aspx.designer.cs">
       <DependentUpon>EditWorkout.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EFDBfirst.Context.cs">
+    <Compile Include="EFDBFirst.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EFDBfirst.Context.tt</DependentUpon>
+      <DependentUpon>EFDBFirst.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="EFDBfirst.cs">
+    <Compile Include="EFDBFirst.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EFDBfirst.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EFDBfirst.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EFDBfirst.edmx</DependentUpon>
+      <DependentUpon>EFDBFirst.edmx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -212,9 +202,6 @@
     <Compile Include="MasterPages\MySwoleMate.Master.designer.cs">
       <DependentUpon>MySwoleMate.Master</DependentUpon>
     </Compile>
-    <Compile Include="Measurement.cs">
-      <DependentUpon>EFDBfirst.tt</DependentUpon>
-    </Compile>
     <Compile Include="Progress.aspx.cs">
       <DependentUpon>Progress.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -223,18 +210,12 @@
       <DependentUpon>Progress.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Schedule.cs">
-      <DependentUpon>EFDBfirst.tt</DependentUpon>
-    </Compile>
     <Compile Include="Scheduler.aspx.cs">
       <DependentUpon>Scheduler.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Scheduler.aspx.designer.cs">
       <DependentUpon>Scheduler.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Trainee.cs">
-      <DependentUpon>EFDBfirst.tt</DependentUpon>
     </Compile>
     <Compile Include="Trainees.aspx.cs">
       <DependentUpon>Trainees.aspx</DependentUpon>
