@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MeasurementBLL.cs" />
+    <Compile Include="ScheduleBLL.cs" />
     <Compile Include="TraineeBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorkoutBLL.cs" />
