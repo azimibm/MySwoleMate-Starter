@@ -63,6 +63,7 @@
     <Compile Include="Schedule.cs">
       <DependentUpon>EFDBFirst.tt</DependentUpon>
     </Compile>
+    <Compile Include="ScheduleSrc2.cs" />
     <Compile Include="Trainee.cs">
       <DependentUpon>EFDBFirst.tt</DependentUpon>
     </Compile>
