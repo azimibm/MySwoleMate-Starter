@@ -7,7 +7,7 @@ using MySwoleMate.Models;
 
 namespace MySwoleMate.DAL
 {
-  class MeasurementDAL
+  public class MeasurementDAL
   {
     public List<Measurement> getMeasurements()
     {
