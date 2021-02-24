@@ -19,8 +19,17 @@ namespace MySwoleMate.BLL
 
     public List<Schedule> GetSchedules()
     {
-      List<Schedule> schedules = data.GetSchedules();
-      return schedules;
+      return data.GetSchedules();
+    }
+
+    public Schedule GetScheduleById(int scID)
+    {
+      return data.GetScheduleById(scID);
+    }
+
+    public List<ScheduleTraineeDTO> GetScheduleOfTrainees()
+    {
+      return data.GetScheduleOfTrainees();
     }
 
     public int EditSchedule(Schedule edit)
@@ -36,11 +45,6 @@ namespace MySwoleMate.BLL
     public void DeleteSchedule(int scID)
     {
       data.DeleteSchedule(scID);
-    }
-
-    public Schedule GetScheduleById(int scID)
-    {
-      return data.GetScheduleById(scID);
     }
   }
 }

@@ -248,6 +248,10 @@
       <Project>{ff78e17a-8517-42d8-a2b1-905dd22fedb0}</Project>
       <Name>MySwoleMate.BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MySwoleMate.DAL\MySwoleMate.DAL.csproj">
+      <Project>{77505065-d842-4ba6-9a10-a21ce466b3fe}</Project>
+      <Name>MySwoleMate.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MySwoleMate.Models\MySwoleMate.Models.csproj">
       <Project>{b20c5675-024e-4a54-be52-86fb6de4c83e}</Project>
       <Name>MySwoleMate.Models</Name>

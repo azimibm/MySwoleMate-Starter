@@ -21,6 +21,36 @@ namespace MySwoleMate.DAL
       return allSchedules;
     }
 
+    public List<ScheduleTraineeDTO> GetScheduleOfTrainees()
+    {
+      using (MySwoleMateEntities db = new MySwoleMateEntities())
+      {
+        //select Schedule.ScheduleDtTime, Trainee.FirstName, Trainee.LastName, Trainee.Email, Trainee.Height, Trainee.CellNbr,
+        //Trainee.Gender, Trainee.Age, Schedule.InputDtTime from Schedule INNER JOIN Trainee ON Schedule.TraineeID = Trainee.TraineeID;
+
+        var data = from Sc in db.Schedules
+                   join Tr in db.Trainees
+                   on Sc.TraineeID equals Tr.TraineeID
+                   select new ScheduleTraineeDTO
+                   {
+                     //Sc = Sc, Tr = Tr
+
+                     ScheduleID = Sc.ScheduleID,
+                     ScheduleDtTime = Sc.ScheduleDtTime,
+                     FirstName = Tr.FirstName,
+                     LastName = Tr.LastName,
+                     Email = Tr.Email,
+                     Height = Tr.Height,
+                     CellNbr = Tr.CellNbr,
+                     Gender = Tr.Gender,
+                     Age = Tr.Age,
+                     InputDtTime = Sc.InputDtTime
+                   };
+        return data.ToList();
+        
+      }
+    }
+
     //Get Schedule By Id
     public Schedule GetScheduleById(int scId)
     {
