@@ -75,5 +75,84 @@ namespace MySwoleMate.DAL
         db.SaveChanges();
       }
     }
+
+    public List<MeasurementScheduleTraineeDTO> GetMeasurementByTraineeId(int tID)
+    {
+      using (MySwoleMateEntities db = new MySwoleMateEntities())
+      {
+        //select Trainee.FirstName, Schedule.ScheduleDtTime, Measurement.Weight, 
+        //Measurement.Waist, Measurement.BodyFat, Measurement.Chest, Measurement.UpperArm
+        //From((Trainee
+        //INNER JOIN Schedule ON Trainee.TraineeID = Schedule.TraineeID)
+        //INNER JOIN Measurement ON Schedule.ScheduleID = Measurement.ScheduleID);
+
+        // Using Navigational Properties to join 3 tables
+        var data = from Mes in db.Measurements
+                   where Mes.Schedule.TraineeID == tID
+                   select new MeasurementScheduleTraineeDTO
+                   {
+                     TraineeID = Mes.Schedule.TraineeID,
+                     MeasurementID = Mes.MeasurementID,
+                     FirstName = Mes.Schedule.Trainee.FirstName,
+                     ScheduleDtTime = Mes.Schedule.ScheduleDtTime,
+                     Weight = Mes.Weight,
+                     Waist = Mes.Waist,
+                     BodyFat = Mes.BodyFat,
+                     Chest = Mes.BodyFat,
+                     UpperArm = Mes.UpperArm,
+                     name = Mes.Schedule.Trainee.FirstName + " " + Mes.Schedule.Trainee.LastName
+                   };
+        return data.ToList();
+      }
+    }
+      public List<MeasurementScheduleTraineeDTO> GetMeasurementPerTrainee()
+      {
+        using (MySwoleMateEntities db = new MySwoleMateEntities())
+        {
+          //select Trainee.FirstName, Schedule.ScheduleDtTime, Measurement.Weight, 
+          //Measurement.Waist, Measurement.BodyFat, Measurement.Chest, Measurement.UpperArm
+          //From((Trainee
+          //INNER JOIN Schedule ON Trainee.TraineeID = Schedule.TraineeID)
+          //INNER JOIN Measurement ON Schedule.ScheduleID = Measurement.ScheduleID);
+
+          // Using Navigational Properties to join 3 tables
+          var data = from Mes in db.Measurements
+                     select new MeasurementScheduleTraineeDTO
+                     {
+                       TraineeID = Mes.Schedule.TraineeID,
+                       MeasurementID = Mes.MeasurementID,
+                       FirstName = Mes.Schedule.Trainee.FirstName,
+                       ScheduleDtTime = Mes.Schedule.ScheduleDtTime,
+                       Weight = Mes.Weight,
+                       Waist = Mes.Waist,
+                       BodyFat = Mes.BodyFat,
+                       Chest = Mes.BodyFat,
+                       UpperArm = Mes.UpperArm,
+                       name = Mes.Schedule.Trainee.FirstName + " " + Mes.Schedule.Trainee.LastName
+                     };
+
+          /*
+          // Using explicit sql join to join 3 tables
+          var data = from Tr in db.Trainees
+                     join Sc in db.Schedules
+                         on Tr.TraineeID equals Sc.TraineeID 
+                     join Mes in db.Measurements
+                         on Sc.ScheduleID equals Mes.ScheduleID
+                     select new MeasurementScheduleTraineeDTO
+                     {
+                       MeasurementID = Mes.ScheduleID,
+                       ScheduleDtTime = Sc.ScheduleDtTime,
+                       FirstName = Tr.FirstName,
+                       Weight = Mes.Weight,
+                       Waist = Mes.Waist,
+                       BodyFat = Mes.BodyFat,
+                       Chest = Mes.Chest,
+                       UpperArm = Mes.UpperArm
+                     };
+          */
+          return data.ToList();
+
+        }
+      }
   }
 }

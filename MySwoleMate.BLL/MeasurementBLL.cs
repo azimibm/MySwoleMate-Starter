@@ -16,7 +16,7 @@ namespace MySwoleMate.BLL
       data = new MeasurementDAL();
     }
 
-    public List<Measurement> GetSchedules()
+    public List<Measurement> GetMeasurements()
     {
       List<Measurement> measurements = data.getMeasurements();
       return measurements;
@@ -40,6 +40,16 @@ namespace MySwoleMate.BLL
     public Measurement GetMeasurementById(int meID)
     {
       return data.GetMeasurementById(meID);
+    }
+
+    public List<MeasurementScheduleTraineeDTO> GetMeasurementPerTrainee()
+    {
+      return data.GetMeasurementPerTrainee();
+    }
+
+    public List<MeasurementScheduleTraineeDTO> GetMeasurementByTraineeId(int tID)
+    {
+      return data.GetMeasurementByTraineeId(tID);
     }
   }
 }
