@@ -80,6 +80,7 @@ namespace MySwoleMate.DAL
       {
         ScheduleDtTime = newSc.ScheduleDtTime,
         InputDtTime = newSc.InputDtTime,
+        TraineeID = newSc.TraineeID
       };
 
       using (MySwoleMateEntities db = new MySwoleMateEntities())
