@@ -21,6 +21,14 @@ namespace MySwoleMate
       }
     }
 
+    protected void ScheuleList_RowDeleting(Object sender, GridViewDeleteEventArgs e)
+    {
+      int scheduleID = Convert.ToInt32(ScheduleList.DataKeys[e.RowIndex].Value);
+      ScheduleBLL scbll = new ScheduleBLL();
+      scbll.DeleteSchedule(scheduleID);
+      BindData();
+    }
+
     private void BindData()
     {
       ScheduleBLL schedule = new ScheduleBLL();

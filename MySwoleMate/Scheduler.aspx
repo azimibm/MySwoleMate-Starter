@@ -15,12 +15,12 @@
       </div>
       <div class="row">
         <div class="col-lg-12 text-center">
-          <asp:GridView ID="ScheduleList" runat="server" CssClass="table table-bordered text-left" AutoGenerateColumns="false" DataKeyNames="ScheduleID">
+          <asp:GridView ID="ScheduleList" runat="server" CssClass="table table-bordered text-left" AutoGenerateColumns="false" DataKeyNames="ScheduleID" OnRowDeleting="ScheuleList_RowDeleting">
             <Columns>
               <asp:HyperLinkField Text="Edit" DataNavigateUrlFields="ScheduleID" DataNavigateUrlFormatString="~/EditSchedule.aspx?ScheduleID={0}" ControlStyle-CssClass="btn btn-success btn-xs" ItemStyle-CssClass="text-center" />
               <asp:TemplateField ItemStyle-CssClass="text-center">
                 <ItemTemplate>
-                  <asp:Button runat="server" ID="DeleteButton" CommandName="Delete" CssClass="btn btn-xs btn-default" Text="Delete" OnClientClick="if(!confirm('Are you sure you wish to delete this appointment?')) return false;" />
+                  <asp:Button runat="server" ID="DeleteButton" CommandName="Delete" CssClass="btn btn-xs btn-default" Text="Delete" OnClientClick="if(!confirm('Are you sure you wish to delete this appointment?')) return false;"/>
                 </ItemTemplate>
               </asp:TemplateField>
               

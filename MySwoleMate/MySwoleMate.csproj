@@ -79,6 +79,7 @@
     <Content Include="AddSchedule.aspx" />
     <Content Include="AddWorkout.aspx" />
     <Content Include="AssignWorkout.aspx" />
+    <Content Include="EditSchedule.aspx" />
     <Content Include="EditWorkout.aspx" />
     <Content Include="EFDBFirst.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -169,6 +170,13 @@
     </Compile>
     <Compile Include="AssignWorkout.aspx.designer.cs">
       <DependentUpon>AssignWorkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditSchedule.aspx.cs">
+      <DependentUpon>EditSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditSchedule.aspx.designer.cs">
+      <DependentUpon>EditSchedule.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditTrainee.aspx.cs">
       <DependentUpon>EditTrainee.aspx</DependentUpon>
