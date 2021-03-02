@@ -57,7 +57,7 @@ namespace MySwoleMate.DAL
       Schedule sc = new Schedule();
       using (MySwoleMateEntities db = new MySwoleMateEntities())
       {
-        sc = db.Schedules.Find();
+        sc = db.Schedules.Find(scId);
       }
       return sc;
     }
@@ -67,7 +67,7 @@ namespace MySwoleMate.DAL
     {
       using (MySwoleMateEntities db = new MySwoleMateEntities())
       {
-        var sc = new Schedule { ScheduleID = editSc.ScheduleID, ScheduleDtTime = editSc.ScheduleDtTime, InputDtTime = editSc.ScheduleDtTime};
+        var sc = new Schedule { ScheduleID = editSc.ScheduleID, ScheduleDtTime = editSc.ScheduleDtTime, InputDtTime = editSc.ScheduleDtTime, TraineeID = editSc.TraineeID};
         db.Entry(sc).State = System.Data.Entity.EntityState.Modified;
         return db.SaveChanges();
       }
