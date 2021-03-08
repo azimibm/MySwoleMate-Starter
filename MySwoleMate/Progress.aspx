@@ -21,13 +21,13 @@
                 <ItemTemplate>
                   <asp:GridView ID="ProgressListChild" runat="server" CssClass="table table-bordered text-left" AutoGenerateColumns="false" DataKeyNames="TraineeID">
                       <Columns>
-                        <asp:HyperLinkField Text="Edit" runat="server" DataNavigateUrlFields="MeasurementID" DataNavigateUrlFormatString="" ControlStyle-CssClass="btn btn-success btn-xs" ItemStyle-CssClass="text-center"/>
-                        <asp:BoundField runat="server" DataField="ScheduleDtTime" HeaderText="Appointment Date and Time" />
-                        <asp:BoundField runat="server" DataField="Weight" HeaderText="Weight(lb)" />
+                        <asp:HyperLinkField Text="Edit" runat="server" DataNavigateUrlFields="MeasurementID" DataNavigateUrlFormatString="" ControlStyle-CssClass="btn btn-success btn-xs behavior" ItemStyle-CssClass="text-center"/>
+                        <asp:BoundField runat="server" DataField="ScheduleDtTime" HeaderText="Appointment Date and Time"/>
+                        <asp:BoundField runat="server" DataField="Weight" HeaderText="Weight(lb)"/>
                         <asp:BoundField runat="server" DataField="Waist" HeaderText="Waist(in)" />
                         <asp:BoundField runat="server" DataField="BodyFat" HeaderText="Body Fat %" />
                         <asp:BoundField runat="server" DataField="Chest" HeaderText="Chest(in)" />
-                        <asp:BoundField runat="server" DataField="UpperArm" HeaderText="Upper Arm(in)" />
+                        <asp:BoundField runat="server" DataField="UpperArm" HeaderText="Upper Arm(in)"/>
                       </Columns>
                   </asp:GridView>
                 </ItemTemplate>
