@@ -23,8 +23,8 @@
                   <asp:Button runat="server" ID="DeleteButton" CommandName="Delete" CssClass="btn btn-xs btn-default" Text="Delete" OnClientClick="if(!confirm('Are you sure you wish to delete this appointment?')) return false;"/>
                 </ItemTemplate>
               </asp:TemplateField>
-              
-              <asp:BoundField DataField="ScheduleDtTime" HeaderText="Appointment Date & Time" />
+
+              <asp:BoundField DataField ="ScheduleDtTime" HeaderText="Appointment Date & Time" ControlStyle-CssClass="beh"/>
               <asp:BoundField DataField="InputDtTime" HeaderText="Last Modeified" />
               <asp:BoundField DataField="FirstName" HeaderText="First Name" />
               <asp:BoundField DataField="LastName" HeaderText="Last Name" />
@@ -40,4 +40,6 @@
       </div>
     </div>
   </section>
+  <script src="Script/behavior.js" type="text/javascript">  </script>
 </asp:Content>
+

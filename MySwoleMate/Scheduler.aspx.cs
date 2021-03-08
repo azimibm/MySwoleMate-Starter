@@ -18,6 +18,10 @@ namespace MySwoleMate
       if (!IsPostBack)
       {
         BindData();
+        foreach (GridViewRow row in ScheduleList.Rows)
+        {
+          row.CssClass = "myCustomClass";
+        }
       }
     }
 

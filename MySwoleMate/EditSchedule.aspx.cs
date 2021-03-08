@@ -32,6 +32,7 @@ namespace MySwoleMate
         TraineeList.Items.Insert(0, "--Select a trainee from the list--");
         TraineeList.SelectedValue = sc.TraineeID.ToString();
         DateOfAppointment.Text = sc.ScheduleDtTime.ToString("yyyy-MM-dd"); //The format has to be like this: "yyyy-mm-dd" otherwise it won't show in the browser
+        //DateOfAppointment.Text = sc.DisplayScheduleDtTime.ToString();
         TimeOfAppointment.Text = sc.InputDtTime.ToString("HH:mm");
       }
     }
