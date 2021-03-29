@@ -40,6 +40,6 @@
       </div>
     </div>
   </section>
-  <script src="Script/behavior.js" type="text/javascript">  </script>
+  <script src="Script/bgColorChange.js" type="text/javascript"></script>
 </asp:Content>
 

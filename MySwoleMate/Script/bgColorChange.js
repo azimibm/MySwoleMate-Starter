@@ -14,6 +14,8 @@
           var currentDateObj = new Date();
 
           if (onlyDateObj.getTime() < currentDateObj.getTime()) {
+            rows[i].classList.add("alert");
+            rows[i].classList.add("alert-warning");
             rows[i].style.backgroundColor = 'Red';
           } 
         }
