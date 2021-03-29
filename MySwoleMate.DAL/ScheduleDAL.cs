@@ -10,6 +10,7 @@ namespace MySwoleMate.DAL
 {
   public class ScheduleDAL
   {
+ 
     //Returns All Schedules
     public List<Schedule> GetSchedules()
     {

@@ -29,7 +29,11 @@ namespace MySwoleMate
         int rowId = Convert.ToInt32(ProgressListParent.DataKeys[e.Row.RowIndex].Value);
         GridView cgv = (GridView)e.Row.FindControl("ProgressListChild");
         cgv.DataSource = mes.GetMeasurementByTraineeId(rowId);
-        cgv.DataBind();      
+        cgv.DataBind();
+        foreach(GridViewRow row in cgv.Rows)
+        {
+          row.CssClass = "saharCssClass";
+        }
       }
     }
 
@@ -41,14 +45,10 @@ namespace MySwoleMate
       //ProgressListParent.DataSource = mes.GetMeasurementPerTrainee();
       //ProgressListParent.DataBind();
       
-      
       string connectionString = ConfigurationManager.ConnectionStrings["MySwoleMateConnectionString"].ToString();
       TraineeBLL trainee = new TraineeBLL(connectionString);
       ProgressListParent.DataSource = trainee.GetAllTrainees();
-      
-
       ProgressListParent.DataBind();
-      
     }
   }
 }
