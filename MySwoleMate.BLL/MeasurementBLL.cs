@@ -18,7 +18,7 @@ namespace MySwoleMate.BLL
 
     public List<Measurement> GetMeasurements()
     {
-      List<Measurement> measurements = data.getMeasurements();
+      List<Measurement> measurements = data.GetMeasurements();
       return measurements;
     }
 

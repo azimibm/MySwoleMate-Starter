@@ -9,7 +9,7 @@ namespace MySwoleMate.DAL
 {
   public class MeasurementDAL
   {
-    public List<Measurement> getMeasurements()
+    public List<Measurement> GetMeasurements()
     {
       List<Measurement> allMeasuremnets = new List<Measurement>();
       using (MySwoleMateEntities db = new MySwoleMateEntities())
@@ -25,7 +25,8 @@ namespace MySwoleMate.DAL
       Measurement m = new Measurement();
       using (MySwoleMateEntities db = new MySwoleMateEntities())
       {
-        m = db.Measurements.Find();
+        //m = db.Measurements.Single(MeasurementID => m.MeasurementID == mId);
+        m = db.Measurements.Find(mId);
       }
       return m;
     }
