@@ -20,11 +20,14 @@ namespace MySwoleMate
         Measurement ms = msbll.GetMeasurementById(Convert.ToInt32(Request.QueryString["MeasurementID"]));
         if (ms != null)
         {
+          MeasurementID.Text = ms.MeasurementID.ToString();
+          ScheduleID.Text = ms.ScheduleID.ToString();
           Weight.Text = ms.Weight.ToString();
           Waist.Text = ms.Waist.ToString();
           BodyFat.Text = ms.BodyFat.ToString();
           Chest.Text = ms.BodyFat.ToString();
           UpperArm.Text = ms.UpperArm.ToString();
+          
         }
       }
     }

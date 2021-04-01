@@ -15,6 +15,42 @@ namespace MySwoleMate
   {
 
     /// <summary>
+    /// MeasurementIDLabel control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Label MeasurementIDLabel;
+
+    /// <summary>
+    /// MeasurementID control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.TextBox MeasurementID;
+
+    /// <summary>
+    /// ScheduleIDLabel control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Label ScheduleIDLabel;
+
+    /// <summary>
+    /// ScheduleID control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.TextBox ScheduleID;
+
+    /// <summary>
     /// WeightLabel control.
     /// </summary>
     /// <remarks>

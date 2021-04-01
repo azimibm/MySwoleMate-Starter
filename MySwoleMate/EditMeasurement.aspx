@@ -11,6 +11,18 @@
         </div>
       </div>
       <div class="form-horizontal">
+         <div class="form-group">
+          <asp:Label ID="MeasurementIDLabel" runat="server" Text="MeasurementID" AssociatedControlID="MeasurementID" CssClass="col-xs-4 control-label"></asp:Label>
+          <div class="col-xs-4">
+            <asp:TextBox ID="MeasurementID" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+          </div>
+        </div>
+        <div class="form-group">
+          <asp:Label ID="ScheduleIDLabel" runat="server" Text="ScheduleID" AssociatedControlID="ScheduleID" CssClass="col-xs-4 control-label"></asp:Label>
+          <div class="col-xs-4">
+            <asp:TextBox ID="ScheduleID" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+          </div>
+        </div>
         <div class="form-group">
           <asp:Label ID="WeightLabel" runat="server" Text="Weight (lb)" AssociatedControlID="Weight" CssClass="col-xs-4 control-label"></asp:Label>
           <div class="col-xs-4">
