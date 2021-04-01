@@ -21,7 +21,7 @@
                 <ItemTemplate>
                   <asp:GridView ID="ProgressListChild" runat="server" CssClass="table table-bordered text-left Benji" AutoGenerateColumns="false" DataKeyNames="TraineeID">
                       <Columns>
-                        <asp:HyperLinkField Text="Edit" runat="server" DataNavigateUrlFields="MeasurementID" DataNavigateUrlFormatString="" ControlStyle-CssClass="btn btn-success btn-xs behavior" ItemStyle-CssClass="text-center"/>
+                        <asp:HyperLinkField Text="Edit" runat="server" DataNavigateUrlFields="MeasurementID" DataNavigateUrlFormatString="~/EditMeasurement.aspx?MeasurementID={0}" ControlStyle-CssClass="btn btn-success btn-xs behavior" ItemStyle-CssClass="text-center"/>
                         <asp:BoundField runat="server" DataField="ScheduleDtTime" HeaderText="Appointment Date and Time"/>
                         <asp:BoundField runat="server" DataField="Weight" HeaderText="Weight(lb)"/>
                         <asp:BoundField runat="server" DataField="Waist" HeaderText="Waist(in)" />

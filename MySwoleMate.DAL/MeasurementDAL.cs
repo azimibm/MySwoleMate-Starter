@@ -9,7 +9,7 @@ namespace MySwoleMate.DAL
 {
   public class MeasurementDAL
   {
-    public List<Measurement> getMeasurements()
+    public List<Measurement> GetMeasurements()
     {
       List<Measurement> allMeasuremnets = new List<Measurement>();
       using (MySwoleMateEntities db = new MySwoleMateEntities())
@@ -25,7 +25,8 @@ namespace MySwoleMate.DAL
       Measurement m = new Measurement();
       using (MySwoleMateEntities db = new MySwoleMateEntities())
       {
-        m = db.Measurements.Find();
+        //m = db.Measurements.Single(MeasurementID => m.MeasurementID == mId);
+        m = db.Measurements.Find(mId);
       }
       return m;
     }
@@ -35,8 +36,13 @@ namespace MySwoleMate.DAL
     {
       using (MySwoleMateEntities db = new MySwoleMateEntities())
       {
-        var m = new Measurement { MeasurementID = editMes.MeasurementID, Weight = editMes.Weight, Waist = editMes.Waist, 
-                                  BodyFat = editMes.BodyFat, Chest = editMes.Chest, UpperArm = editMes.UpperArm};
+        var m = new Measurement {MeasurementID = editMes.MeasurementID,
+                                  Weight = editMes.Weight,
+                                  Waist = editMes.Waist, 
+                                  BodyFat = editMes.BodyFat,
+                                  Chest = editMes.Chest,
+                                  UpperArm = editMes.UpperArm,
+                                  ScheduleID = editMes.ScheduleID};
         db.Entry(m).State = System.Data.Entity.EntityState.Modified;
         return db.SaveChanges();
       }

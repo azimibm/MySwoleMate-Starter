@@ -79,6 +79,7 @@
     <Content Include="AddSchedule.aspx" />
     <Content Include="AddWorkout.aspx" />
     <Content Include="AssignWorkout.aspx" />
+    <Content Include="EditMeasurement.aspx" />
     <Content Include="EditSchedule.aspx" />
     <Content Include="EditWorkout.aspx" />
     <Content Include="EFDBFirst.Context.tt">
@@ -170,6 +171,13 @@
     </Compile>
     <Compile Include="AssignWorkout.aspx.designer.cs">
       <DependentUpon>AssignWorkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditMeasurement.aspx.cs">
+      <DependentUpon>EditMeasurement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditMeasurement.aspx.designer.cs">
+      <DependentUpon>EditMeasurement.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditSchedule.aspx.cs">
       <DependentUpon>EditSchedule.aspx</DependentUpon>
