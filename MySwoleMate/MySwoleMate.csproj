@@ -76,6 +76,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddMeasurements.aspx" />
     <Content Include="AddSchedule.aspx" />
     <Content Include="AddWorkout.aspx" />
     <Content Include="AssignWorkout.aspx" />
@@ -143,6 +144,13 @@
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddMeasurements.aspx.cs">
+      <DependentUpon>AddMeasurements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddMeasurements.aspx.designer.cs">
+      <DependentUpon>AddMeasurements.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddSchedule.aspx.cs">
       <DependentUpon>AddSchedule.aspx</DependentUpon>

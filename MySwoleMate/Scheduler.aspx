@@ -33,7 +33,7 @@
               <asp:BoundField DataField="CellNbr" HeaderText="Cell-Phone" />
               <asp:BoundField DataField="Gender" HeaderText="Gender" />
               <asp:BoundField DataField="Age" HeaderText="Age" />
-              <asp:HyperLinkField Text="Enter Measurements" DataNavigateUrlFormatString="~/AddMeasurement.aspx?ScheduleID={0}" ControlStyle-CssClass="btn btn-success btn-xs" ItemStyle-CssClass="text-center" />
+              <asp:HyperLinkField Text="Enter Measurements" DataNavigateUrlFields="ScheduleID" DataNavigateUrlFormatString="~/AddMeasurements.aspx?ScheduleID={0}" ControlStyle-CssClass="btn btn-success btn-xs" ItemStyle-CssClass="text-center" />
             </Columns>
           </asp:GridView>
         </div>

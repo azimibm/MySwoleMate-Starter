@@ -39,12 +39,12 @@ namespace MySwoleMate
 
     public void BindData()
     {
-      
+      /*
       MeasurementBLL mes = new MeasurementBLL();
       List<Models.Measurement> mesList = mes.GetMeasurements();
       //ProgressListParent.DataSource = mes.GetMeasurementPerTrainee();
       //ProgressListParent.DataBind();
-      
+      */
       string connectionString = ConfigurationManager.ConnectionStrings["MySwoleMateConnectionString"].ToString();
       TraineeBLL trainee = new TraineeBLL(connectionString);
       ProgressListParent.DataSource = trainee.GetAllTrainees();
